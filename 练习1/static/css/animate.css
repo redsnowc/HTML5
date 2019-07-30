@@ -1,0 +1,245 @@
+/*第一屏动画*/
+.screen01__title,
+.screen01__phone,
+.screen01__shadow {
+    transition: all 1s;
+}
+
+.screen01__title_animate_init,
+.screen01__shadow_animate_init {
+    opacity: 0;
+    transform: translate(0, 100%);
+}
+
+.screen01__phone_animate_init {
+    opacity: 0;
+    transform: translate(0, -100%);
+}
+
+.screen01__title_animate_done,
+.screen01__phone_animate_done,
+.screen01__shadow_animate_done {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/*第二屏动画*/
+.screen02__title,
+.screen02__subtitle,
+.screen02__phone {
+    transition: all 1s;
+}
+
+.screen02__phone__detail {
+    transition: all 1.5s;
+}
+
+.screen02__title_animate_init {
+    opacity: 0;
+    transform: translate(0, -100%);
+}
+
+.screen02__subtitle_animate_init {
+    opacity: 0;
+    transform: translate(0, 100%);
+}
+
+.screen02__phone_animate_init {
+    opacity: 0;
+    transform: translate(0, 50%);
+}
+
+.screen02__phone__detail-left_animate_init {
+    opacity: 0;
+    transform: translate(-200%, 0);
+}
+
+.screen02__phone__detail-right01_animate_init,
+.screen02__phone__detail-right02_animate_init {
+    opacity: 0;
+    transform: translate(200%, 0);
+}
+
+.screen02__title_animate_done,
+.screen02__subtitle_animate_done,
+.screen02__phone_animate_done,
+.screen02__phone__detail-left_animate_done {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.screen02__phone__detail::before {
+    animation: flash 1.5s ease-in-out infinite;
+}
+
+@keyframes flash {
+    from {border: solid 6px rgba(240, 20, 20, 0.0);}
+    50% {border: solid 6px rgba(240, 20, 20, 0.4);}
+    to {border: solid 6px rgba(240, 20, 20, 0.0);}
+}
+
+/*第三屏动画*/
+.screen03__title,
+.screen03__subtitle,
+.screen03__phone,
+.screen03__features {
+    transition: all 1s;
+}
+
+.screen03__features__item {
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.screen03__title_animate_init {
+    opacity: 0;
+    transform: translate(0, -100%);
+}
+
+.screen03__subtitle_animate_init {
+    opacity: 0;
+    transform: translate(0, 100%);
+}
+
+.screen03__phone_animate_init {
+    opacity: 0;
+    transform: translate(0, 50%);
+}
+
+.screen03__features_animate_init {
+    opacity: 0;
+    transform: scale(.5);
+}
+
+.screen03__title_animate_done,
+.screen03__subtitle_animate_done,
+.screen03__phone_animate_done {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.screen03__features_animate_done {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.screen03__features__item:hover {
+    transform: scale(1.1);
+    border-color: #ffffff;
+}
+
+/*第四屏动画*/
+.screen04__title,
+.screen04__subtitle {
+    transition: all 1s;
+}
+
+.screen04__type01 {
+    transition: all .5s 1s;
+}
+
+.screen04__type02 {
+    transition: all .5s 1.5s;
+}
+
+.screen04__type03 {
+    transition: all .5s 2s;
+}
+
+.screen04__type04 {
+    transition: all .5s 2.5s;
+}
+
+.screen04__title_animate_init {
+    opacity: 0;
+    transform: translate(0, -100%);
+}
+
+.screen04__subtitle_animate_init {
+    opacity: 0;
+    transform: translate(0, 100%);
+}
+
+.screen04__type01_animate_init,
+.screen04__type02_animate_init,
+.screen04__type03_animate_init,
+.screen04__type04_animate_init {
+    opacity: 0;
+}
+
+.screen04__title_animate_done,
+.screen04__subtitle_animate_done {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.screen04__type01_animate_done,
+.screen04__type02_animate_done,
+.screen04__type03_animate_done,
+.screen04__type04_animate_done {
+    opacity: 1;
+}
+
+/*第五屏动画*/
+.screen05__title,
+.screen05__subtitle,
+.screen05__wrap {
+    transition: all 1s;
+}
+
+.screen05__title_animate_init {
+    opacity: 0;
+    transform: translate(0, -100%);
+}
+
+.screen05__subtitle_animate_init {
+    opacity: 0;
+    transform: translate(0, 100%);
+}
+
+.screen05__wrap_animate_init {
+    opacity: 0;
+    transform: translate(0, 60%);
+}
+
+.screen05__title_animate_done,
+.screen05__subtitle_animate_done,
+.screen05__wrap_animate_done {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/*导航条固定*/
+.header {
+    transition: all 1s;
+}
+
+.header_status_fixed {
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.header_status_fixed .header__logo,
+.header_status_fixed .header__nav-item {
+    color: #ffffff
+}
+
+.header_status_fixed .header__nav-item_status_active {
+    color: #f01414;
+}
+
+/*侧边导航动画*/
+.sideNav {
+    opacity: 0;
+    transition: all 1s;
+    transform: translate(100%, 0);
+}
+
+.sideNav_status_fixed {
+    opacity: 1;
+    transform: translate(0, 0);
+}
