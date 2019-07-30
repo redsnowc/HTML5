@@ -17,6 +17,10 @@
     color: #07111b;
 }
 
+.header_fixed .header__nav__item__button:hover {
+    color: #ffffff;
+}
+
 .header__nav_tip {
     transition: all .5s;
 }
@@ -77,9 +81,18 @@
     transform: translate(0, 60%);
 }
 
-.screen02__item_image02_animate_init,
+.screen02__item_image02_animate_init {
+    opacity: 0;
+}
+
 .screen02__title_tip_animate_init {
     opacity: 0;
+    width: 0;
+}
+
+.screen02__title_tip_animate_done {
+    opacity: 1;
+    width: 50px;
 }
 
 .screen02__item_image03 {
@@ -88,7 +101,6 @@
 
 .screen02__title_animate_done,
 .screen02__subtitle_animate_done,
-.screen02__title_tip_animate_done,
 .screen02__item_image02_animate_done {
     opacity: 1;
     transform: translate(0, 0);
@@ -120,7 +132,6 @@
 }
 
 .screen03__item_course {
-    /*opacity: 0;*/
     animation: shine 1s ease-in-out infinite;
 }
 
@@ -144,6 +155,7 @@
 }
 
 .screen03__title_tip_animate_init {
+    width: 0;
     opacity: 0;
 }
 
@@ -152,17 +164,21 @@
     transform: scale(1);
 }
 
-.screen03__title_animate_done,
-.screen03__subtitle_animate_done,
 .screen03__title_tip_animate_done {
+    opacity: 1;
+    width: 50px;
+}
+
+.screen03__title_animate_done,
+.screen03__subtitle_animate_done {
     opacity: 1;
     transform: translate(0, 0);
 }
 
 @keyframes shine {
-    from {opacity: .6;}
-    50% {opacity: 1;}
-    to {opacity: .6;}
+    from {opacity: .6; transform: scale(.95);}
+    50% {opacity: 1; transform: scale(1);}
+    to {opacity: .6; transform: scale(.95);}
 }
 
 @keyframes spring {
@@ -201,6 +217,7 @@
 }
 
 .screen04__title_tip_animate_init {
+    width: 0;
     opacity: 0;
 }
 
@@ -212,9 +229,13 @@
     transform: scale(.5);
 }
 
-.screen04__title_animate_done,
-.screen04__subtitle_animate_done,
 .screen04__title_tip_animate_done {
+    width: 50px;
+    opacity: 1;
+}
+
+.screen04__title_animate_done,
+.screen04__subtitle_animate_done {
     opacity: 1;
     transform: translate(0, 0);
 }
@@ -255,6 +276,7 @@
 }
 
 .screen05__title_tip_animate_init {
+    width: 0;
     opacity: 0;
 }
 
@@ -263,9 +285,13 @@
     transform: scale(.5);
 }
 
-.screen05__title_animate_done,
-.screen05__subtitle_animate_done,
 .screen05__title_tip_animate_done {
+    width: 50px;
+    opacity: 1;
+}
+
+.screen05__title_animate_done,
+.screen05__subtitle_animate_done {
     opacity: 1;
     transform: translate(0, 0);
 }

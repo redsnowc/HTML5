@@ -50,10 +50,12 @@
     border-radius: 3px;
     line-height: 40px;
     padding-right: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
 }
 
 .header__nav__item__button:hover {
     color: #07111b;
+    box-shadow: unset;
 }
 
 .header__nav_tip {
@@ -403,22 +405,26 @@
 }
 
 .screen06__button {
-    width: 198px;
-    height: 58px;
+    width: 200px;
+    height: 60px;
     font-size: 18px;
     text-align: center;
     line-height: 60px;
     border: 1px solid #707070;
+    box-sizing: border-box;
     border-radius: 4px;
     position: absolute;
     left: 50%;
     margin-left: -100px;
     top: 50%;
     margin-top: -30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
 }
 
 .screen06__button:hover {
-    color: #22bdba;
+    color: #a4a4a4;
+    box-shadow: unset;
+    border-width: 1px;
 }
 
 /*页脚*/
@@ -489,6 +495,14 @@
     color: #07111b;
     display: block;
     border-bottom: 1px solid #edf1f2;
+}
+
+.sideNav__item:hover {
+    color: #f01400;
+}
+
+.sideNav__item_status_active {
+    color: #f01400;
 }
 
 .sideNav__item:last-child {
